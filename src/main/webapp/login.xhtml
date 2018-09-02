@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+	<f:facet name="first">
+		<link rel="shortcut icon" href="#{resource['img/icon.ico']}" type="image/x-icon" />
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<h:outputStylesheet name="css/bootstrap.min.css" />
+		<h:outputStylesheet name="css/bootstrap-responsive.min.css" />
+		<h:outputStylesheet name="css/font-awesome.css" />
+		<h:outputStylesheet name="css/matrix-login.css" />
+		<h:outputStylesheet name="css/custom-font.css" />
+		
+		<h:outputScript target="body" name="js/jquery.min.js" />
+		<h:outputScript target="body" name="js/matrix.login.js" />
+	</f:facet>
+</h:head>
+    <h:body>
+        <div id="loginbox">            
+            <form id="loginform" class="form-vertical" method="post">
+           		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+				<div class="control-group normal_text"> <h3><img src="#{resource['img/logo.png']}" alt="Logo" /></h3></div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="main_input_box">
+                            <span class="add-on bg_lg"><i class="fa fa-user"></i></span><input type="text" name="j_username" placeholder="Username" />
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <div class="main_input_box">
+                            <span class="add-on bg_ly"><i class="fa fa-lock"></i></span><input type="password" name="j_password" placeholder="Password" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">Esqueci a senha</a></span>
+                    <span class="pull-right"><button class="btn btn-success" >Logar</button></span>
+                </div>
+            </form>
+            <form id="recoverform" action="#" class="form-vertical">
+				<p class="normal_text">Entre com seu e-mail abaixo e nós enviaremos pra você instruções de como recuperar a senha.</p>
+				
+                    <div class="controls">
+                        <div class="main_input_box">
+                            <span class="add-on bg_lo"><i class="fa fa-envelope"></i></span><input type="text" placeholder="e-mail" />
+                        </div>
+                    </div>
+               
+                <div class="form-actions">
+                    <span class="pull-left"><a href="#" class="flip-link btn btn-success" id="to-login"> Voltar para login</a></span>
+                    <span class="pull-right"><a class="btn btn-info">Recuperar</a></span>
+                </div>
+            </form>
+        </div>
+    </h:body>
+</html>

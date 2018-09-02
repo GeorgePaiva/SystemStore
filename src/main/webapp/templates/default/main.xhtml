@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+		
+	<f:facet name="first">
+		<link rel="shortcut icon" type="image/x-icon" href="#{resource['img/icon.ico']}" />
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<h:outputStylesheet name="css/bootstrap.min.css" />
+		<h:outputStylesheet name="css/bootstrap-responsive.min.css" />
+		<h:outputStylesheet name="css/fullcalendar.css" />
+		<h:outputStylesheet name="css/matrix-style.css" />
+		<h:outputStylesheet name="css/matrix-media.css" />
+		<h:outputStylesheet name="css/font-awesome.css" />
+		<h:outputStylesheet name="css/jquery.gritter.css" />
+		<h:outputStylesheet name="css/custom-font.css" />
+		<h:outputScript target="body" name="js/excanvas.min.js" />
+		<h:outputScript target="body" name="js/jquery.min.js" />
+		<h:outputScript target="body" name="js/jquery.ui.custom.js" />
+		<h:outputScript target="body" name="js/bootstrap.min.js" />
+		<h:outputScript target="body" name="js/jquery.flot.min.js" />
+		<h:outputScript target="body" name="js/jquery.flot.resize.min.js" />
+		<h:outputScript target="body" name="js/jquery.peity.min.js" />
+		<h:outputScript target="body" name="js/fullcalendar.min.js" />
+		<h:outputScript target="body" name="js/matrix.js" />
+		<h:outputScript target="body" name="js/matrix.dashboard.js" />
+		<h:outputScript target="body" name="js/jquery.gritter.min.js" />
+		<h:outputScript target="body" name="js/matrix.interface.js" />
+		<h:outputScript target="body" name="js/matrix.chat.js" />
+		<h:outputScript target="body" name="js/jquery.validate.js" />
+		<h:outputScript target="body" name="js/matrix.form_validation.js" />
+		<h:outputScript target="body" name="js/jquery.wizard.js" />
+		<h:outputScript target="body" name="js/jquery.uniform.js" />
+		<h:outputScript target="body" name="js/select2.min.js" />
+		<h:outputScript target="body" name="js/matrix.popover.js" />
+		<h:outputScript target="body" name="js/jquery.dataTables.min.js" />
+		<h:outputScript target="body" name="js/matrix.tables.js" />
+		
+		<script type="text/javascript">
+		  // This function is called from the pop-up menus to transfer to
+		  // a different page. Ignore if the value returned is a null string:
+		  function goPage (newURL) {
+		
+		      // if url is empty, skip the menu dividers and reset the menu selection to default
+		      if (newURL != "") {
+		      
+		          // if url is "-", it is this page -- reset the menu:
+		          if (newURL == "-" ) {
+		              resetMenu();            
+		          } 
+		          // else, send page to designated URL            
+		          else {  
+		            document.location.href = newURL;
+		          }
+		      }
+		  }
+		
+		// resets the menu selection upon entry to this page:
+		function resetMenu() {
+		   document.gomenu.selector.selectedIndex = 2;
+		}
+	</script>
+	
+	</f:facet>
+</h:head>
+<h:body>
+	<ui:include src="header.xhtml" />
+	<ui:include src="leftMenu.xhtml" />
+	<ui:include src="content.xhtml" />
+	<ui:include src="footer.xhtml" />
+</h:body>
+</html>

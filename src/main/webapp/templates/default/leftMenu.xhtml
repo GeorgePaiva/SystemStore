@@ -1,0 +1,67 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<!--sidebar-menu-->
+<div id="sidebar">
+<a href="#" class="visible-phone"><i class="fa fa-fw fa-pie-chart"></i>Dashboard</a>
+  <ul>
+    <li class="active"><h:outputLink value="/SystemStore/dashboard.xhtml"><i class="fa fa-fw fa-pie-chart"></i> Dashboard</h:outputLink></li>
+    <li class="submenu"> <a href="#"><i class="fa fa-fw fa-shopping-bag"></i><span>Vendas</span></a>
+      <ul>
+        <li><h:link value="PDV" outcome="/vendas/pdv.xhtml" /></li>
+        <li><h:link value="Clientes" outcome="/vendas/clientes.xhtml" /></li>
+        <li><h:link value="Comissões" outcome="/vendas/comissoes.xhtml" /></li>
+        <li><h:link value="Loja Virtual" outcome="/vendas/loja-virtual.xhtml" /></li>
+        <li><h:link value="Notas Fiscais" outcome="/vendas/notas-fiscais.xhtml" /></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="fa fa-fw fa-shopping-cart"></i><span>Compras</span></a>
+      <ul>
+        <li><h:link value="Orçamentos" outcome="/compras/orcamentos.xhtml" /></li>
+        <li><h:link value="Devoluções" outcome="/compras/devolucoes.xhtml" /></li>
+        <li><h:link value="Fornecedores" outcome="/compras/fornecedores.xhtml" /></li>
+        <li><h:link value="Central de Compras" outcome="/compras/central-compras.xhtml" /></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="fa fa-fw fa-cubes"></i><span>Estoque</span></a>
+      <ul>
+        <li><h:link value="MRP" outcome="/estoque/mrp.xhtml" /></li>
+        <li><h:link value="Catálogo" outcome="/estoque/catalogo.xhtml" /></li>
+        <li><h:link value="Relatórios" outcome="/estoque/relatorios.xhtml" /></li>
+        <li><h:link value="Movimentação" outcome="/estoque/movimentacao.xhtml" /></li>
+        <li><h:link value="Grade de Produtos" outcome="/estoque/grade-produtos.xhtml" /></li>
+      </ul>
+    </li>
+     <li class="submenu"> <a href="#"><i class="fa fa-fw fa-money"></i><span>Financeiro</span></a>
+      <ul>
+        <li><h:link value="DRE" outcome="/financeiro/dre.xhtml" /></li>
+        <li><h:link value="Fluxo de Caixa" outcome="/financeiro/fluxo-caixa.xhtml" /></li>
+        <li><h:link value="Contas a Pagar" outcome="/financeiro/contas-pagar.xhtml" /></li>
+        <li><h:link value="Contas a Receber" outcome="/financeiro/contas-receber.xhtml" /></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="fa fa-fw fa-cogs"></i><span>Configurações</span></a>
+      <ul>
+        <li><h:link value="Tags" outcome="/configuracoes/tags.xhtml" /></li>
+        <li><h:link value="Metas" outcome="/configuracoes/metas.xhtml" /></li>
+        <li><h:link value="Formas de Pagamentos" outcome="/configuracoes/formas-pagamento.xhtml" /></li>
+      </ul>
+    </li>
+    <li class="content"> <span>Meta de Vendas Diárias</span>
+      <div class="progress progress-mini progress-danger active progress-striped">
+        <div style="width: 77%;" class="bar"></div>
+      </div>
+      <span class="percent">77%</span>
+      <div class="stat">R$ 75,00 / R$ 125,00</div>
+    </li>
+    <li class="content"> <span>Meta de Vendas Mensal</span>
+      <div class="progress progress-mini active progress-striped">
+        <div style="width: 87%;" class="bar"></div>
+      </div>
+      <span class="percent">87%</span>
+      <div class="stat">R$ 790,00 / R$ 1200,00</div>
+    </li>
+  </ul>
+</div>
+<!--sidebar-menu-->
+</ui:composition>
